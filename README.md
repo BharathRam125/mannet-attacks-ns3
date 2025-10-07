@@ -70,4 +70,17 @@ Comprehensive NS-3 simulation  for MANET security research: RREQ flooding &amp; 
 | Sybil Identity    | Multiple spoofed IPs send rapid packet bursts      | Rate + burst detection with violation tracking    | Significant drops of attack packets; 100% PDR |
 
 These mechanisms together provide robust protection for MANETs by identifying and mitigating malicious traffic patterns while allowing legitimate communication to continue uninterrupted.
+# Attacks & Defense Results
+
+## Flooding Attack & Defense
+![Flooding Attack vs Defense](results/images/flooding-attack-defence.png)
+
+## Sybil Attack Results
+![Sybil Attack Demonstration](resultsimages/sybil-attack-result.png)
+
+## Flooding Attack Result
+![Flooding Attack Output](resultsimages/flooding-attack-result.png)
+
+## Sybil Defense Result
+![Sybil Defense Output](results/images/sybil-defence-result.png)
 
