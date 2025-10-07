@@ -72,15 +72,15 @@ Comprehensive NS-3 simulation  for MANET security research: RREQ flooding &amp; 
 These mechanisms together provide robust protection for MANETs by identifying and mitigating malicious traffic patterns while allowing legitimate communication to continue uninterrupted.
 # Attacks & Defense Results
 
-## Flooding Attack & Defense
-![Flooding Attack vs Defense](results/images/flooding-attack-defence.png)
+## Flooding Attack Result
+![Flooding Attack](results/images/flooding-attack-result.png)
+
+## Flooding  Defense Results
+![Flooding Defence](results/images/flooding-attack-defense.png)
 
 ## Sybil Attack Results
-![Sybil Attack Demonstration](resultsimages/sybil-attack-result.png)
-
-## Flooding Attack Result
-![Flooding Attack Output](resultsimages/flooding-attack-result.png)
+![Sybil Attack ](results/images/sybil-attack-result.png)
 
 ## Sybil Defense Result
-![Sybil Defense Output](results/images/sybil-defence-result.png)
+![Sybil Defense ](results/images/sybil-defence-result.png)
 
