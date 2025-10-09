@@ -82,8 +82,8 @@ public:
     for (auto &entry : m_suspiciousActivity) {
       std::string level = (entry.second >= m_suspiciousThreshold ? "HIGH"
                            : (entry.second >= 5 ? "MEDIUM" : "LOW"));
-      std::cout << "  " << entry.first
-                << " - Violations: " << entry.second
+      std::cout << "  " << entry.first 
+                << " - Violations: " << entry.second 
                 << " (Threat: " << level << ")" << std::endl;
     }
     std::cout << "===============================================" << std::endl;
@@ -218,6 +218,8 @@ int main(int argc, char *argv[])
     "Bounds", RectangleValue(Rectangle(-200, 200, -200, 200)),
     "Speed", StringValue("ns3::UniformRandomVariable[Min=1.0|Max=3.0]"));
   mobility.Install(nodes);
+  
+  
 
   // AODV with HELLO disabled to reduce overhead
   AodvHelper aodv;
@@ -274,12 +276,15 @@ int main(int argc, char *argv[])
     std::cout << "PCAP tracing enabled for forensic analysis" << std::endl;
   }
 
-  // NetAnim
-  AnimationInterface anim("flooding-defense.xml");
+  
+  // NetAnim visualization
+  AnimationInterface anim("flooding-defence.xml");
   for (uint32_t i = 0; i < numNodes - 1; ++i) {
-    anim.UpdateNodeColor(nodes.Get(i), 0, 255, 0);
+    anim.UpdateNodeColor(nodes.Get(i), 0, 255, 0);  // green normal
+    anim.UpdateNodeSize(nodes.Get(i)->GetId(), 10, 10);
   }
-  anim.UpdateNodeColor(attackerNode, 255, 0, 0);
+  anim.UpdateNodeColor(attackerNode, 255, 0, 0);  // red attacker
+   anim.UpdateNodeSize(attackerNode->GetId(), 15, 15);  
 
   // Run simulation
   Simulator::Stop(Seconds(simTime));
@@ -332,3 +337,4 @@ int main(int argc, char *argv[])
 
   return 0;
 }
+

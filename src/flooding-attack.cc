@@ -118,15 +118,17 @@ int main(int argc, char *argv[])
   NetDeviceContainer devices = wifi.Install(phy, mac, nodes);
 
   // Mobility: moderate speed
-  MobilityHelper mobility;
-  mobility.SetPositionAllocator("ns3::GridPositionAllocator",
-    "MinX", DoubleValue(-100.0), "MinY", DoubleValue(-100.0),
-    "DeltaX", DoubleValue(50.0),  "DeltaY", DoubleValue(50.0),
-    "GridWidth", UintegerValue(4), "LayoutType", StringValue("RowFirst"));
-  mobility.SetMobilityModel("ns3::RandomWalk2dMobilityModel",
-    "Bounds", RectangleValue(Rectangle(-150, 150, -150, 150)),
-    "Speed", StringValue("ns3::UniformRandomVariable[Min=1.0|Max=3.0]"));
-  mobility.Install(nodes);
+   MobilityHelper mobility;
+  
+   mobility.SetPositionAllocator("ns3::GridPositionAllocator",
+                                  "MinX", DoubleValue(100.0), "MinY", DoubleValue(100.0),
+                                  "DeltaX", DoubleValue(80.0), "DeltaY", DoubleValue(80.0),
+                                  "GridWidth", UintegerValue(5), "LayoutType", StringValue("RowFirst"));
+    mobility.SetMobilityModel("ns3::RandomWalk2dMobilityModel",
+                              "Bounds", RectangleValue(Rectangle(50, 550, 50, 550)),
+                              "Speed", StringValue("ns3::UniformRandomVariable[Min=1.0|Max=4.0]"),
+                              "Distance", DoubleValue(80.0));
+    mobility.Install(nodes);
 
   // Install AODV on normal nodes
   AodvHelper aodv;
@@ -175,8 +177,11 @@ int main(int argc, char *argv[])
   AnimationInterface anim("flooding-attack.xml");
   for (uint32_t i = 0; i < numNodes - 1; ++i) {
     anim.UpdateNodeColor(nodes.Get(i), 0, 255, 0);  // green normal
+    anim.UpdateNodeSize(nodes.Get(i)->GetId(), 25, 25);
   }
-  anim.UpdateNodeColor(attacker, 255, 0, 0);        // red attacker
+  anim.UpdateNodeColor(attacker, 255, 0, 0);  // red attacker
+   anim.UpdateNodeSize(attacker->GetId(), 35, 35);      
+
 
   // Run simulation
   Simulator::Stop(Seconds(simTime));
