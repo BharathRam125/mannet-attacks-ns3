@@ -76,7 +76,7 @@ These mechanisms together provide robust protection for MANETs by identifying an
 ![Flooding Attack](results/images/flooding-attack-result.png)
 
 ## Flooding  Defense Results
-![Flooding Defence](results/images/flooding-attack-defense.png)
+![Flooding Defence](results/images/flooding-attack-defence.png)
 
 ## Sybil Attack Results
 ![Sybil Attack ](results/images/sybil-attack-result.png)
