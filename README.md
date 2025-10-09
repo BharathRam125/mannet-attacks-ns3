@@ -109,16 +109,6 @@ Mathematical models used for metric computation:
 
 ---
 
-mannet-attacks-ns3/
-│
-├── src/ # NS-3 simulation source code
-├── policies/ # Defence logic modules
-├── results/ # Simulation logs and Wireshark outputs
-│ └── images/ # Topology and pcap visualizations
-├── report/ # LaTeX report and Beamer presentation
-└── README.md
 
 
 
-
-## 🧱 Project Structure
