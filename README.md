@@ -1,14 +1,5 @@
 # 🛰️ MANET Attacks and Defence in NS-3
 **Comprehensive NS-3 Simulation Framework for MANET Security Research**
-
----
-
-## 👥 Contributors
-
-| Name | GitHub ID | Role |
-|------|------------|------|
-| **Karthikeyan G** | [@Karthikeyan1202](https://github.com/Karthikeyan1202)
-| **Bharath Ram S** | [@bharathram04](https://github.com/bharathram04)
 ---
 
 ## 🚀 Overview
@@ -108,7 +99,7 @@ Mathematical models used for metric computation:
 ![Flooding Attack](results/images/flooding-attack-result.png)
 
 ### Flooding Defence
-![Flooding Defence](results/images/flooding-attack-defense.png)
+![Flooding Defence](results/images/flooding-attack-defence.png)
 
 ### Sybil Attack
 ![Sybil Attack](results/images/sybil-attack-result.png)
