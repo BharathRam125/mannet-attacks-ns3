@@ -93,7 +93,7 @@ Mathematical models used for metric computation:
 
 ---
 
-## 🧪 Simulation Evidence
+## 🧪 Simulation results
 
 ### Flooding Attack
 ![Flooding Attack](results/images/flooding-attack-result.png)
