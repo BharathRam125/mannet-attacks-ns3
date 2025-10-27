@@ -61,19 +61,19 @@ The framework supports:
 Mathematical models used for metric computation:
 
 - **Packet Delivery Ratio (PDR):**
-  \[
+  $$
   PDR = \frac{N_{recv}}{N_{sent}} \times 100
-  \]
+  $$
 
 - **Packet Drop Rate:**
-  \[
+  $$
   DropRate = \frac{N_{drop}}{N_{sent}} \times 100
-  \]
+  $$
 
 - **Defence Effectiveness:**
-  \[
+  $$
   DefenceEff = \frac{N_{blocked}}{N_{attack}} \times 100
-  \]
+  $$
 
 ---
 
